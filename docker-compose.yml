@@ -1,0 +1,18 @@
+version: '3'
+services:
+  crc_api:
+    build: .
+    container_name: crc_api
+    volumes:
+      - /shiye_data:/shiye_data
+      - ./:/shiye_data/violet/
+    working_dir: /shiye_data/violet/service/
+    command: python crc_api_service.py
+    ports:
+      - 8632:8632
+    env_file:
+      - docs/proj_env/env.list
+    deploy:
+      restart_policy:
+        condition: on-failure
+      replicas: 1
