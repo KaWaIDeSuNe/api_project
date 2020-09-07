@@ -1,13 +1,13 @@
 version: '3'
 services:
-  crc_api:
+  api_service:
     build: .
-    container_name: crc_api
+    container_name: api_service
     volumes:
-      - /shiye_data:/shiye_data
-      - ./:/shiye_data/violet/
-    working_dir: /shiye_data/violet/service/
-    command: python crc_api_service.py
+      - ./:/Users/liangduanqi/shiye_data/GithubProject/api_project/
+      - ./log:/log
+    working_dir: /project/api_project/
+    command: python service/api_service.py
     ports:
       - 8632:8632
     env_file:

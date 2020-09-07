@@ -1,4 +1,4 @@
-## 对外OpenApi接口
+## Api接口
 
 ### 主要运行环境
 python3.6
@@ -11,13 +11,26 @@ docker compose up -d
 ```
 
 
-### docker-compose各模块说明
+### docker-compose服务说明
 
-- crc_api
-华润api
+- demo_api
 ```
-celery worker -A trading_system_master -l info -c 20
 ```
+
+
+### 模块介绍
+
+
+- data_server
+数据库相关的处理操作，IO相关操作
+
+- domain
+逻辑处理操作
+
+- server
+    handler 请求参数、超时验证
+api_server.py api服务总入口
+
 
 
 
