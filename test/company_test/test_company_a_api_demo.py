@@ -26,7 +26,6 @@ class TestCompanyAAPIDemo(TestServiceBase):
         request = {"userId": "test_use_case",
                    "stCode": "221188"}
         result = self._get_response(request, "/v1/a/apiDemo")
-        print(result)
         out_come = result["responseContent"]["content"][0]["stName"]
         target = "中国平安"
         self.assertTrue(out_come, target)
