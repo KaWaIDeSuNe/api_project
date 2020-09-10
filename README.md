@@ -7,7 +7,7 @@ python3.6
 快速启动
 
 ```
-docker compose up -d
+docker-compose up -d
 ```
 
 
