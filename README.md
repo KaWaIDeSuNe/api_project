@@ -11,25 +11,11 @@ docker compose up -d
 ```
 
 
-### docker-compose服务说明
-
-- demo_api
-```
-```
+### 详细文档
+【腾讯文档】API系统说明文档
+https://docs.qq.com/doc/DRkZKdFhPZWZ5R2d0
 
 
-### 模块介绍
-
-
-- data_server
-数据库相关的处理操作，IO相关操作
-
-- domain
-逻辑处理操作
-
-- server
-    handler 请求参数、超时验证
-api_server.py api服务总入口
 
 
 
